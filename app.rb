@@ -14,3 +14,8 @@ post("/locations") do
   location.save()
   erb(:success)
 end
+
+post("/") do
+  @locations = Location.clear()
+  erb(:index)
+end
